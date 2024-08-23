@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo-pandaLingua.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../script/script.js"></script>
+    <title>Reset Password | PandaLingua</title>
+</head>
+
+<body
+    style="background-image: url(../assets/img/signin-bg.png); background-position: center; background-repeat: no-repeat; background-size: cover"
+    class="min-h-screen w-full flex items-center justify-center">
+    <div
+        class="flex flex-col justify-center items-center gap-5 px-6 py-12 lg:px-8 bg-neutral-300/25 rounded-[20px] backdrop-blur-md backdrop-brightness-110 shadow-md">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center gap-3">
+            <h2 class="text-center text-4xl font-bold tracking-tight text-red-900">One-Time Password</h2>
+            <p class="text-center">Masukkan kode OTP yang anda terima!
+            </p>
+        </div>
+
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <form class="space-y-6 min-w-[370px]" action="#" method="POST">
+                <div>
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">One-Time
+                        Password</label>
+                    <input id="otp" name="otp" type="text" required
+                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6" />
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="flex w-full justify-center rounded-md bg-red-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 transition duration-300 ease-in-out transform">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
