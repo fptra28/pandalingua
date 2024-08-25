@@ -16,12 +16,14 @@ Pandalingua adalah aplikasi web interaktif yang dirancang untuk membantu penggun
    ```bash
    git clone https://github.com/username/pandalingua.git
 2. **Masuk ke direktori proyek:**
-3. **Konfigurasi server lokal:** Pastikan Anda memiliki server PHP yang berjalan (seperti XAMPP, WAMP, atau LAMP), dan arahkan document root ke direktori proyek ini.
-4. **Konfigurasi database:**
+   ```bash
+   cd pandalingua
+4. **Konfigurasi server lokal:** Pastikan Anda memiliki server PHP yang berjalan (seperti XAMPP, WAMP, atau LAMP), dan arahkan document root ke direktori proyek ini.
+5. **Konfigurasi database:**
    - Buat database baru di server MySQL Anda.
    - Import file SQL (jika disediakan) ke dalam database yang baru dibuat.
    - Sesuaikan konfigurasi koneksi database di file config.php atau file lain yang sesuai dengan struktur proyek.
-5. **Jalankan aplikasi:** Akses aplikasi melalui browser di alamat http://localhost/pandalingua atau sesuai konfigurasi server lokal Anda.
+6. **Jalankan aplikasi:** Akses aplikasi melalui browser di alamat http://localhost/pandalingua atau sesuai konfigurasi server lokal Anda.
 
 ## Kontribusi
 Kami menyambut kontribusi dari siapa saja yang ingin meningkatkan Pandalingua. Silakan buat pull request atau buka issue jika Anda menemukan bug atau memiliki saran untuk fitur baru.
