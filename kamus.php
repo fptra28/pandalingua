@@ -46,11 +46,11 @@ include './backend/tbl-dictionary.php';
         </div>
         <div class="flex space-x-4">
             <a href="#signup"><button
-                    class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold font-['Poppins'] hover:bg-red-900">
+                    class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold hover:bg-red-900">
                     SIGN UP
                 </button></a>
             <a href="#signin"><button
-                    class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold font-['Poppins'] hover:bg-red-900">
+                    class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold hover:bg-red-900">
                     SIGN IN
                 </button></a>
         </div>
@@ -61,9 +61,9 @@ include './backend/tbl-dictionary.php';
         <div class="flex-col justify-center items-start gap-5 inline-flex">
             <div class="flex-col justify-start items-start flex gap-3">
                 <div class="flex-col justify-center items-start flex">
-                    <div class="text-black text-6xl font-bold font-['Poppins']">Kamus Kosakata Mandarin</div>
+                    <div class="text-black text-6xl font-bold">Kamus Kosakata Mandarin</div>
                 </div>
-                <div class="text-black text-xl font-normal font-['Poppins']">Materi HSK 1 memperkenalkan dasar Bahasa
+                <div class="text-black text-xl font-normal">Materi HSK 1 memperkenalkan dasar Bahasa
                     Mandarin, dimulai dari
                     pengucapan nada, penulisan huruf, dan penggunaan kosakata sederhana
                     dalam percakapan sehari-hari.</div>
@@ -71,11 +71,11 @@ include './backend/tbl-dictionary.php';
             <div class="w-full flex-row justify-center items-center gap-3 flex">
                 <button onclick="scrollToSection('kamus-section')"
                     class="w-full px-[20px] py-[20px] bg-red-700 shadow-md rounded-xl border-2 border-black justify-center items-center gap-2.5 inline-flex hover:bg-red-900 transition duration-300 ease-in-out transform">
-                    <div class="text-white text-base font-bold font-['Poppins']">KOSAKATA</div>
+                    <div class="text-white text-base font-bold">KOSAKATA</div>
                 </button>
                 <button
                     class="w-full px-[20px] py-[20px] rounded-xl shadow-md border-2 border-black justify-center items-center gap-2.5 inline-flex hover:bg-neutral-300 transition duration-300 ease-in-out transform">
-                    <div class="text-red-700 text-base font-bold font-['Poppins']">DOWNLOAD SOAL</div>
+                    <div class="text-red-700 text-base font-bold">DOWNLOAD SOAL</div>
                 </button>
             </div>
         </div>
@@ -158,16 +158,16 @@ include './backend/tbl-dictionary.php';
             <img class="w-[324px] h-[99px]" src="./assets/img/text-pandalingua.png" />
             <div class="w-[1px] h-full bg-white"></div>
             <div class="w-full flex justify-between items-center">
-                <a href="./index.html" class="text-center text-white text-xl font-semibold font-['Poppins']">Beranda</a>
-                <a href="./index.html" class="text-white text-xl font-semibold font-['Poppins']">Kursus</a>
-                <a href="./index.html" class="text-center text-white text-xl font-semibold font-['Poppins']">Kamus</a>
+                <a href="./index.html" class="text-center text-white text-xl font-semibold">Beranda</a>
+                <a href="./index.html" class="text-white text-xl font-semibold">Kursus</a>
+                <a href="./index.html" class="text-center text-white text-xl font-semibold">Kamus</a>
                 <a href="./account.html"
-                    class="text-center text-white text-xl font-semibold font-['Poppins']">Account</a>
-                <a href="#contact" class="text-center text-white text-xl font-semibold font-['Poppins']">Contact</a>
+                    class="text-center text-white text-xl font-semibold">Account</a>
+                <a href="#contact" class="text-center text-white text-xl font-semibold">Contact</a>
             </div>
         </div>
         <div class="w-full py-5 border-t border-white justify-center items-center gap-[59px] inline-flex">
-            <div class="text-center text-white text-xl font-semibold font-['Poppins']">© 2024 - PandaLingua. All Rights
+            <div class="text-center text-white text-xl font-semibold">© 2024 - PandaLingua. All Rights
                 Reserved</div>
         </div>
     </div>

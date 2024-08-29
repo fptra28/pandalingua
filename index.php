@@ -42,11 +42,11 @@
     </div>
     <div class="flex space-x-4">
       <a href="#signup"><button
-          class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold font-['Poppins'] hover:bg-red-900">
+          class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold hover:bg-red-900">
           SIGN UP
         </button></a>
       <a href="#signin"><button
-          class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold font-['Poppins'] hover:bg-red-900">
+          class="px-5 py-2.5 rounded-md border-2 border-white text-white text-lg font-bold hover:bg-red-900">
           SIGN IN
         </button></a>
     </div>
@@ -57,22 +57,22 @@
     <img class="w-[500px] h-[500px]" src="./assets/img/42579140847.png" />
     <div class="flex-col justify-center items-start gap-5 inline-flex">
       <div class="flex-col justify-start items-start flex gap-3">
-        <div class="text-black text-xl font-normal font-['Poppins']">Selamat datang di</div>
+        <div class="text-black text-xl font-normal">Selamat datang di</div>
         <div class="flex-col justify-center items-start flex">
-          <div class="text-black text-6xl font-bold font-['Poppins']">PandaLingua</div>
-          <div class="text-black text-[25px] font-semibold font-['Poppins']">LEARN MANDARIN</div>
+          <div class="text-black text-6xl font-bol">PandaLingua</div>
+          <div class="text-black text-[25px] font-semibold  ">LEARN MANDARIN</div>
         </div>
-        <div class="text-black text-xl font-normal font-['Poppins']">Temukan berbagai materi kursus Mandarin di sini dan
+        <div class="text-black text-xl font-normal">Temukan berbagai materi kursus Mandarin di sini dan
           selesaikan kuisnya.</div>
       </div>
       <div class="w-full flex-col justify-center items-center gap-3 flex">
         <button
           class="w-full px-[20px] py-[20px] bg-red-700 shadow-md rounded-xl border-2 border-black justify-center items-center gap-2.5 inline-flex hover:bg-red-900 transition duration-300 ease-in-out transform">
-          <div class="text-white text-base font-bold font-['Poppins']">Mulai Belajar Dari Awal!</div>
+          <div class="text-white text-base font-bold">Mulai Belajar Dari Awal!</div>
         </button>
         <button
           class="w-full px-[20px] py-[20px] rounded-xl shadow-md border-2 border-black justify-center items-center gap-2.5 inline-flex hover:bg-neutral-300 transition duration-300 ease-in-out transform">
-          <div class="text-red-700 text-base font-bold font-['Poppins']">Lihat Tingkatan Kursus</div>
+          <div class="text-red-700 text-base font-bold">Lihat Tingkatan Kursus</div>
         </button>
       </div>
     </div>
@@ -93,10 +93,10 @@
         </div>
         <div class="w-full px-5 py-2.5 flex flex-col justify-center items-center gap-4">
           <div class="w-full flex justify-between items-center">
-            <div class="text-neutral-500 text-base font-semibold font-['Poppins']">PandaLingua</div>
-            <div class="text-neutral-500 text-base font-semibold font-['Poppins']">20 Lessons</div>
+            <div class="text-neutral-500 text-base font-semibold">PandaLingua</div>
+            <div class="text-neutral-500 text-base font-semibold">20 Lessons</div>
           </div>
-          <div class="text-black text-2xl font-semibold font-['Poppins']">Mandarin Beginner</div>
+          <div class="text-black text-2xl font-semibold">Mandarin Beginner</div>
         </div>
       </div>
       <div
@@ -107,10 +107,10 @@
         </div>
         <div class="w-full px-5 py-2.5 flex flex-col justify-center items-center gap-4">
           <div class="w-full flex justify-between items-center">
-            <div class="text-neutral-500 text-base font-semibold font-['Poppins']">PandaLingua</div>
-            <div class="text-neutral-500 text-base font-semibold font-['Poppins']">20 Lessons</div>
+            <div class="text-neutral-500 text-base font-semibold">PandaLingua</div>
+            <div class="text-neutral-500 text-base font-semibold">20 Lessons</div>
           </div>
-          <div class="text-black text-2xl font-semibold font-['Poppins']">Mandarin Intermediate</div>
+          <div class="text-black text-2xl font-semibold">Mandarin Intermediate</div>
         </div>
       </div>
       <div
@@ -121,10 +121,10 @@
         </div>
         <div class="w-full px-5 py-2.5 flex flex-col justify-center items-center gap-4">
           <div class="w-full flex justify-between items-center">
-            <div class="text-neutral-500 text-base font-semibold font-['Poppins']">PandaLingua</div>
-            <div class="text-neutral-500 text-base font-semibold font-['Poppins']">20 Lessons</div>
+            <div class="text-neutral-500 text-base font-semibold">PandaLingua</div>
+            <div class="text-neutral-500 text-base font-semibold">20 Lessons</div>
           </div>
-          <div class="text-black text-2xl font-semibold font-['Poppins']">Mandarin Advanced</div>
+          <div class="text-black text-2xl font-semibold">Mandarin Advanced</div>
         </div>
       </div>
     </div>
@@ -135,15 +135,15 @@
       <img class="w-[324px] h-[99px]" src="./assets/img/text-pandalingua.png" />
       <div class="w-[1px] h-full bg-white"></div>
       <div class="w-full flex justify-between items-center">
-        <a href="./index.html" class="text-center text-white text-xl font-semibold font-['Poppins']">Beranda</a>
-        <a href="./index.html" class="text-white text-xl font-semibold font-['Poppins']">Kursus</a>
-        <a href="./index.html" class="text-center text-white text-xl font-semibold font-['Poppins']">Kamus</a>
-        <a href="./account.html" class="text-center text-white text-xl font-semibold font-['Poppins']">Account</a>
-        <a href="#contact" class="text-center text-white text-xl font-semibold font-['Poppins']">Contact</a>
+        <a href="./index.html" class="text-center text-white text-xl font-semibold">Beranda</a>
+        <a href="./index.html" class="text-white text-xl font-semibold">Kursus</a>
+        <a href="./index.html" class="text-center text-white text-xl font-semibold">Kamus</a>
+        <a href="./account.html" class="text-center text-white text-xl font-semibold">Account</a>
+        <a href="#contact" class="text-center text-white text-xl font-semibold">Contact</a>
       </div>
     </div>
     <div class="w-full py-5 border-t border-white justify-center items-center gap-[59px] inline-flex">
-      <div class="text-center text-white text-xl font-semibold font-['Poppins']">© 2024 - PandaLingua. All Rights
+      <div class="text-center text-white text-xl font-semibold">© 2024 - PandaLingua. All Rights
         Reserved</div>
     </div>
   </div>
