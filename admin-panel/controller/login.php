@@ -4,7 +4,7 @@ include './koneksi/koneksi-db.php'; // File untuk koneksi ke database
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = ($_POST['password']);
 
     $query = "SELECT * FROM tbl_admin WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $query);

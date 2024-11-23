@@ -7,13 +7,22 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
-
 // Load koneksi database
 include_once './koneksi/koneksi-db.php';
 
-// Ambil data dari tbl_course
-$queryCourses = "SELECT course_id, imgCourse, title, total_lessons, created_at FROM tbl_course";
-$resultCourses = mysqli_query($conn, $queryCourses);
+// Mengambil quiz_id dari URL dengan aman
+$courseId = isset($_GET['course_id']) ? intval($_GET['course_id']) : 0;
+
+// Query untuk mendapatkan pertanyaan berdasarkan quiz_id
+$queryMateri = "SELECT lesson_id, course_id, title, content, create_at 
+                   FROM tbl_materi WHERE course_id = ?";
+if ($stmt = $conn->prepare($queryMateri)) {
+    $stmt->bind_param("i", $courseId);
+    $stmt->execute();
+    $resultQuestions = $stmt->get_result();
+} else {
+    die("Query preparation failed: " . $conn->error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -74,37 +83,35 @@ $resultCourses = mysqli_query($conn, $queryCourses);
 
     <!-- Main Content -->
     <div id="content" class="w-full flex flex-col ml-64 p-10 gap-5">
-        <div class="flex flex-row justify-between item-center">
-            <h1 class="text-2xl font-bold">Courses</h1>
-            <a href="./course/addCourse.php">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800">Add New Course</button>
+        <div class="flex flex-row justify-between items-center">
+            <a href="./admin-Course.php" class="text-center text-2xl">
+                <i class="fa-solid fa-circle-chevron-left"></i> Back
+            </a>
+            <h1 class="text-2xl font-bold">Materi List</h1>
+            <a href="./materi/addMateri.php?course_id=<?php echo $courseId; ?>">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800">Add New Question</button>
             </a>
         </div>
-        <table class="w-full text-left text-sm text-gray-500 dark:text-gray-400">
-            <thead class="ttext-xs text-gray-700 uppercase bg-gray-800">
+        <table class="w-full text-left text-sm text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-800">
                 <tr class="text-center text-white">
                     <th class="px-6 py-3">ID</th>
-                    <th class="px-6 py-3">Image</th>
                     <th class="px-6 py-3">Title</th>
-                    <th class="px-6 py-3">Total Lessons</th>
+                    <th class="px-6 py-3">Content</th>
                     <th class="px-6 py-3">Created At</th>
-                    <th class="px-6 py-3">Actions</th>
+                    <th class="px-6 py-3">Action</th>
                 </tr>
             </thead>
-            <tbody >
-                <?php while ($row = mysqli_fetch_assoc($resultCourses)) : ?>
+            <tbody>
+                <?php while ($row = $resultQuestions->fetch_assoc()) : ?>
                     <tr class="bg-gray-300 text-black text-center">
-                        <td class="px-6 py-4"><?php echo htmlspecialchars($row['course_id']); ?></td>
-                        <td class="px-6 py-4">
-                            <img src="../uploads/<?php echo htmlspecialchars($row['imgCourse']); ?>" alt="<?php echo htmlspecialchars($row['imgCourse']); ?>" class="w-20">
-                        </td>
-                        <td class="px-6 py-4"><?php echo htmlspecialchars($row['title']); ?></td>
-                        <td class="px-6 py-4"><?php echo htmlspecialchars($row['total_lessons']); ?></td>
-                        <td class="px-6 py-4"><?php echo htmlspecialchars($row['created_at']); ?></td>
-                        <td class="px-6 py-4 flex flex-col gap-2 min-h-full">
-                        <a href="./admin-materi.php?course_id=<?php echo htmlspecialchars($row['course_id']); ?>" class="w-full bg-yellow-500 text-black py-2 px-10 hover:bg-yellow-900 hover:text-white">Materi</a>
-                            <a href="./course/editCourse.php?id=<?php echo htmlspecialchars($row['course_id']); ?>" class="w-full bg-blue-500 text-white py-2 px-10 hover:bg-blue-900">Edit</a>
-                            <a href="./controller/deleteCourse.php?id=<?php  echo htmlspecialchars($row['course_id']); ?>" class="w-full bg-red-500 text-white py-2 px-10 hover:bg-red-900">Delete</a>
+                        <td class="px-6 py-4"><?php echo $row['lesson_id']; ?></td>
+                        <td class="px-6 py-4"><?php echo $row['title']; ?></td>
+                        <td class="px-6 py-4"><?php echo strip_tags(html_entity_decode($row['content'])); ?></td>
+                        <td class="px-6 py-4"><?php echo $row['create_at']; ?></td>
+                        <td class="px-6 py-4 flex flex-col items-center justify-center gap-2">
+                            <a href="./materi/editMateri.php?course_id=<?php echo $courseId; ?>&lesson_id=<?php echo $row['lesson_id']; ?>" class="w-full bg-blue-500 text-white py-2 px-10 hover:bg-blue-900">Ubah</a>
+                            <a href="./controller/deleteMateri.php?lesson_id=<?php echo urlencode($row['lesson_id']); ?>&course_id=<?php echo urlencode($courseId); ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus materi ini?');" class="w-full bg-red-500 text-white py-2 px-10 hover:bg-red-900">Hapus</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

@@ -1,6 +1,12 @@
 <?php
 // Mulai sesi dan koneksi ke database
 session_start();
+
+if (!isset($_SESSION['admin'])) {
+    header("Location: ./admin-login.php");
+    exit();
+}
+
 require_once('../koneksi/koneksi-db.php');
 
 // Periksa apakah form telah disubmit
